@@ -4,8 +4,162 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>宇宙大帝國先行體驗版</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'></script>
+  <script src='http://www.turnjs.com/lib/turn.min.js'></script> 
 </head>
+<style>
+
+  body{
+      background-color: #000;
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./bg.webp');
+    background-size: cover;
+  }
+
+  #flipbook .page{
+      width:100%;
+      height:100%;
+      text-align:center;
+  }
+  
+  #flipbook  {
+    background-color:#ccc;
+    background-image: url('./page.png');
+    background-size: cover;
+  }
+  
+  #flipbook .odd{
+    background-image: url('./right.webp');
+    box-shadow:inset 0 0 5px #666;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #flipbook .even{
+    background-image: url('./left.webp');
+    box-shadow:inset 0 0 5px #666;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
 <body>
-  hello world
+  <div class="container">
+    <div id="flipbook">
+      <div>
+        <h1>目錄</h1>
+        <ul>
+          <li>
+            <h2>太陽</h2>
+          </li>
+          <li>
+            <h2>月亮</h2>
+          </li>
+          <li>
+            <h2>水星</h2>
+          </li>
+          <li>
+            <h2>金星</h2>
+          </li>
+          <li>
+            <h2>火星</h2>
+          </li>
+          <li>
+            <h2>木星</h2>
+          </li>
+          <li>
+            <h2>土星</h2>
+          </li>
+          <li>
+            <h2>天王星</h2>
+          </li>
+          <li>
+            <h2>海王星</h2>
+          </li>
+          <li>
+            <h2>冥王星</h2>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3>太陽</h3>
+      </div>
+      <div>太陽介紹</div>
+      <div>
+        <h3>月亮</h3>
+      </div>
+      <div>月亮介紹</div>
+      <div>
+        <h3>水星</h3>
+      </div>
+      <div>水星介紹</div>
+      <div>
+        <h3>
+          金星
+        </h3>
+      </div>
+      <div>金星介紹</div>
+      <div>
+        <h3>
+          火星
+        </h3>
+      </div>
+      <div>火星介紹</div>
+      <div>
+        <h3>
+          木星
+        </h3>
+      </div>
+      <div>木星介紹</div>
+      <div>
+        <h3>
+          土星
+        </h3>
+      </div>
+      <div>土星介紹</div>
+      <div>
+        <h3>
+          天王星
+        </h3>
+      </div>
+      <div>天王星介紹</div>
+      <div>
+        <h3>
+          海王星
+        </h3>
+      </div>
+      <div>海王星介紹</div>
+      <div>
+        <h3>
+          冥王星
+        </h3>
+      </div>
+      <div>冥王星介紹</div>
+    </div>
+  </div>
+<script>
+  $("#flipbook").turn({
+    width: '63vw', //翻頁檢視的寬度
+    height: '54vw',//翻頁檢視的高度
+    autoCenter: false, // 預設false是否居中
+  });
+</script>
 </body>
+
 </html>
