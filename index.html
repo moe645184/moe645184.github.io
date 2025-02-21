@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>宇宙大帝國先行體驗版</title>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'></script>
-  <script src='http://www.turnjs.com/lib/turn.min.js'></script> 
+  <script src='./jquery.js'></script>
+  <script src="./turn.js"></script>
 </head>
 <style>
-
   body{
-      background-color: #000;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
   }
 
   ul{
@@ -18,6 +19,10 @@
     padding: 0;
   }
 
+  h1,h2 {
+    padding: 0;
+    margin: 0;
+  }
   .container{
     height: 100vh;
     width: 100vw;
@@ -155,8 +160,8 @@
   </div>
 <script>
   $("#flipbook").turn({
-    width: '63vw', //翻頁檢視的寬度
-    height: '54vw',//翻頁檢視的高度
+    width: '56vw', //翻頁檢視的寬度
+    height: '48vw',//翻頁檢視的高度
     autoCenter: false, // 預設false是否居中
   });
 </script>
